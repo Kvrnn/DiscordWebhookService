@@ -12,12 +12,10 @@ const appport = process.env.PORT || 3000
 app.use(cors());
 app.use(express.json());
 
-// Declaring all Services
-const devRouter      = require('./api/services/development.route')
-const herokuRouter   = require('./api/services/heroku.route')
+// Declaring endpoint
+const mainRouter = require('./api/services/main.route')
 
-app.use('/dev',devRouter)
-app.use('/heroku',herokuRouter)
+app.use('/',mainRouter)
 
 app.listen(appport, function(err) {
     if (err) throw new err;
