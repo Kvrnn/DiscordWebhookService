@@ -1,8 +1,6 @@
 const router    = require('express').Router();
 const axios     = require('axios').default;
 const stringify = require('json-stringify-safe');
-const routes    = require('../../config.env.json')
-
 require('dotenv').config()
 
 router.route('/').all(async (req,res)=>{
@@ -29,7 +27,7 @@ router.route('/:route').all(async(req, res) => {
         }
         content_array.push(attribute+" "+req.body[attribute])
     }
-    axios.post(routes[req.params.route+'_DISCORDHOOK_URL'], {
+    axios.post(process.env[req.params.route+'_DISCORDHOOK_URL'], {
         "content":JSON.stringify(content_array, null, 4)
     })
         .then(_response => {
