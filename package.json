@@ -1,0 +1,30 @@
+{
+  "name": "discordwebhookservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kvrnn/DiscordWebhookService.git"
+  },
+  "author": "Kevin (Syntax#5569)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kvrnn/DiscordWebhookService/issues"
+  },
+  "homepage": "https://github.com/Kvrnn/DiscordWebhookService#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "json-stringify-safe": "^5.0.1"
+  }
+}
