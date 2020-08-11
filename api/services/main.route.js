@@ -11,6 +11,8 @@ router.route('/').all(async (req,res)=>{
 router.route('/:route').all(async(req, res) => {
     if(req.params.route === 'plaintext'){
         console.log(req)
+        console.log("Body: ", req.body)
+        console.log('Res: ', stringify(req))
         res.status(200).end(res.send(stringify(req)))
     } else{
         await parser.publicfunctions.parser(req.body)
